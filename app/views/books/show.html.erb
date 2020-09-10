@@ -6,6 +6,7 @@
       Borrower: <%= copy.borrower %> </br>
       Due: <%= copy.due_date %>
       <%= link_to 'Edit Copy', edit_book_copy_path(:book_id => @book.id) %>
+      <%= button_to "Delete Copy", book_copy_path({:book_id => @book.id, :id => copy.id} ), :method => :delete %>
     </li>
   <% end %>
 </ul>
