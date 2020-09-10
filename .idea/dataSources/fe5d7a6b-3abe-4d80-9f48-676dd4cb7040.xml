@@ -86,19 +86,21 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="26" parent="8" name="Book_Id">
+    <column id="26" parent="8" name="book_id">
       <Position>2</Position>
-      <DataType>varchar|0s</DataType>
+      <DataType>integer|0s</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
     </column>
-    <column id="27" parent="8" name="Borrower">
+    <column id="27" parent="8" name="borrower">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
     </column>
-    <column id="28" parent="8" name="Due_Date">
+    <column id="28" parent="8" name="due_date">
       <Position>4</Position>
-      <DataType>varchar|0s</DataType>
+      <DataType>date|0s</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
     </column>
     <key id="29" parent="8">
       <ColNames>id</ColNames>

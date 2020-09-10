@@ -2,5 +2,8 @@
 <ul>
   <% for book in @books %>
     <li><%= link_to book.Title, book_path(:id => book.id) %></li>
+    <%= link_to 'Edit Book', edit_book_path(:id => book.id) %>
+    <%= button_to "delete", book_path(:id => book.id), :method => :delete %>
   <% end %>
 </ul>
+<%= link_to 'New Book', new_book_path %>
