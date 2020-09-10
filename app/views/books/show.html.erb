@@ -1,0 +1,12 @@
+<h1>Book: <%= @book.Title %></h1>
+
+<ul>
+  <% for copy in @book.copies %>
+    <li>
+      Borrower: <%= copy.Borrower %> </br>
+      Due: <%= copy.Due_Date %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'back', books_path %>

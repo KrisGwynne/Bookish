@@ -1,7 +1,7 @@
 <h1>My Books</h1>
 <ul>
   <% for book in @books %>
-    <li><%= book.Title %></li>
+    <li><%= link_to book.Title, book_path(:id => book.id) %></li>
     <%= link_to 'Edit Book', edit_book_path(:id => book.id) %>
     <%= button_to "delete", book_path(:id => book.id), :method => :delete %>
   <% end %>
