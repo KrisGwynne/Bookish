@@ -3,10 +3,12 @@
 <ul>
   <% for copy in @book.copies %>
     <li>
-      Borrower: <%= copy.Borrower %> </br>
-      Due: <%= copy.Due_Date %>
+      Borrower: <%= copy.borrower %> </br>
+      Due: <%= copy.due_date %>
     </li>
   <% end %>
 </ul>
+
+<%= link_to 'New Copy', new_book_copy_path(:book_id => @book.id) %>
 
 <%= link_to 'back', books_path %>
