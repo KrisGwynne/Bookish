@@ -2,13 +2,18 @@ class CopiesController < ApplicationController
   before_action :get_book
 
   def new
-    # @book = Book.find(params[:book_id])
     @copy = @book.copies.build
   end
 
   def create
     @copy = @book.copies.create(copy_params)
-    redirect_to(book_path(:id => params[:book_id]))
+
+    if @copy.save
+      redirect_to(book_path(:id => params[:book_id]))
+    else
+      redirect_to(new_book_copy_path(:book_id => @book.id))
+    end
+
   end
 
   def edit
@@ -17,8 +22,11 @@ class CopiesController < ApplicationController
 
   def update
     @copy = Copy.find(params[:id])
-    @copy.update_attributes(copy_params)
-    redirect_to(book_path(:id => params[:book_id]))
+    if @copy.update_attributes(copy_params)
+      redirect_to(book_path(:id => params[:book_id]))
+    else
+      redirect_to(edit_book_copy_path(:book_id => @book.id))
+    end
   end
 
   def destroy
