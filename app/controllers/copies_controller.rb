@@ -17,7 +17,6 @@ class CopiesController < ApplicationController
   end
 
   def edit
-    print params[:id]
     @copy = Copy.find(params[:id])
   end
 
