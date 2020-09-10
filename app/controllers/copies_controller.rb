@@ -11,6 +11,16 @@ class CopiesController < ApplicationController
     redirect_to(book_path(:id => params[:book_id]))
   end
 
+  def edit
+    @copy = Copy.find(params[:id])
+  end
+
+  def update
+    @copy = Copy.find(params[:id])
+    @copy.update_attributes(copy_params)
+    redirect_to(book_path(:id => params[:book_id]))
+  end
+
 end
 
 def get_book

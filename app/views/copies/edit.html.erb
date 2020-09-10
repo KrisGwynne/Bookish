@@ -1,0 +1,20 @@
+<h1>Editing Copy</h1>
+
+<%= form_with(model: [@book, @copy]) do |f| %>
+
+  <p>
+    <%= f.label :borrower %><br />
+    <%= f.text_field :borrower %>
+  </p>
+  <p>
+    <%= f.label :due_date %><br />
+    <%= f.text_field :due_date %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+
+<% end %>
+
+<%= link_to 'Back', book_path(:id => params[:book_id]) %>
