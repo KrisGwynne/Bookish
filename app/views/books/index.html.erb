@@ -2,7 +2,7 @@
 <ul>
   <% for book in @books %>
     <li><%= book.Title %></li>
-    <button>Edit</button>
+    <%= link_to 'Edit Book', edit_book_path(:id => book.id) %>
     <button>Remove</button>
   <% end %>
 </ul>
