@@ -144,6 +144,7 @@
       <updated>1599646816400</updated>
       <workItem from="1599646817756" duration="5582000" />
       <workItem from="1599726276712" duration="4051000" />
+      <workItem from="1599812595462" duration="36000" />
     </task>
     <servers />
   </component>
@@ -151,18 +152,6 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-<<<<<<< HEAD
-=======
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
->>>>>>> master
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
